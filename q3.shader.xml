@@ -1,0 +1,158 @@
+<NotepadPlus>
+    <UserLang name="Q3.shader" ext="shader" udlVersion="2.1">
+        <Settings>
+            <Global caseIgnored="no" allowFoldOfComments="yes" foldCompact="no" />
+            <Prefix Keywords1="no" Keywords2="no" Keywords3="no" Keywords4="no"
+                    Keywords5="no" Keywords6="no" Keywords7="no" Keywords8="no" />
+        </Settings>
+
+        <KeywordLists>
+
+            <!-- Comments -->
+            <Keywords name="Comments">00// 01/* 02*/</Keywords>
+
+            <!-- Shader-level: general directives, q3map2, surfaceparms, qer_* -->
+            <Keywords name="Keywords1">
+                skyParms cull deformVertexes fogParms noPicMip noMipMaps polygonOffset portal sort
+
+                qer_editorImage qer_editorimage qer_noCarve qer_nocarve
+                qer_trans qer_alphaFunc qer_alphafunc qer_noshader qer_nolightmap
+
+                q3map_alphaGen q3map_alphaMod q3map_backShader q3map_backSplash
+                q3map_baseShader q3map_bounce q3map_bounceScale q3map_clipModel
+                q3map_cloneShader q3map_colorGen q3map_colorMod q3map_fogDir
+                q3map_forceMeta q3map_forceSunlight q3map_fur q3map_globalTexture
+                q3map_indexed q3map_invert q3map_lightImage q3map_lightmapAxis
+                q3map_lightmapBrightness q3map_lightmapFilterRadius
+                q3map_lightmapGamma q3map_lightmapMergable q3map_lightmapSampleOffset
+                q3map_lightmapSampleSize q3map_lightmapSize q3map_lightRGB
+                q3map_lightStyle q3map_lightSubdivide q3map_noClip q3map_noFast
+                q3map_noFog q3map_nonPlanar q3map_normalImage q3map_noTJunc
+                q3map_noVertexLight q3map_noVertexShadows q3map_offset
+                q3map_patchShadows q3map_remapShader q3map_rgbGen q3map_rgbMod
+                q3map_shadeAngle q3map_skylight q3map_splotchFix q3map_styleMarker
+                q3map_styleMarker2 q3map_sun q3map_sunExt q3map_surfaceLight
+                q3map_surfaceModel q3map_tcGen q3map_tcMod q3map_terrain
+                q3map_tessSize q3map_textureSize q3map_traceLight q3map_vertexScale
+                q3map_vertexShadows q3map_vlight
+
+                q3map_lightImage q3map_skyLight q3map_lightmapSampleOffset
+                q3map_lightmapGamma q3map_lightmapBrightness q3map_lightmapFilterRadius
+                q3map_backShader q3map_cloneShader q3map_indexed q3map_noFog
+                q3map_noClip q3map_noFast q3map_forceMeta q3map_nonPlanar
+                q3map_shadeAngle q3map_offset q3map_invert
+                q3map_alphaMod volume q3map_alphaMod set q3map_alphaMod scale
+                q3map_alphaMod dotproduct q3map_alphaMod dotproduct2
+                q3map_tcGen ivector q3map_tcMod rotate q3map_tcMod scale q3map_tcMod translate
+
+                surfaceparm alphashadow surfaceparm antiportal surfaceparm areaportal
+                surfaceparm botclip surfaceparm clusterportal surfaceparm detail
+                surfaceparm donotenter surfaceparm dust surfaceparm flesh
+                surfaceparm fog surfaceparm hint surfaceparm ladder surfaceparm lava
+                surfaceparm lightfilter surfaceparm lightgrid surfaceparm metalsteps
+                surfaceparm monsterclip surfaceparm nodamage surfaceparm nodlight
+                surfaceparm nodraw surfaceparm noimpact surfaceparm nomarks
+                surfaceparm nolightmap surfaceparm nosteps surfaceparm nonsolid
+                surfaceparm origin surfaceparm playerclip surfaceparm pointlight
+                surfaceparm skip surfaceparm sky surfaceparm slick surfaceparm slime
+                surfaceparm structural surfaceparm trans surfaceparm water
+            </Keywords>
+
+            <!-- Stage-level commands -->
+            <Keywords name="Keywords2">
+                map clampmap animMap videoMap
+                blendFunc blendFuncSeparate
+                rgbGen alphaGen
+                tcMod tcGen
+                depthFunc depthWrite
+                alphaFunc
+                detail
+                portal
+                cloudparms
+
+                identity identityLighting
+                oneMinusVertex oneMinusConstantAlpha oneMinusConstantColor
+                lightingDiffuse exactVertex vertex lightingSpecular
+
+                $lightmap
+            </Keywords>
+
+            <!-- tcMod + waveforms -->
+            <Keywords name="Keywords3">
+                scroll scale rotate stretch turb transform
+                sin triangle square sawtooth inversesawtooth noise
+                entityTranslate scroll2 scale2
+            </Keywords>
+
+            <!-- GL constants -->
+            <Keywords name="Keywords4">
+                GL_ONE GL_ZERO
+                GL_SRC_ALPHA GL_ONE_MINUS_SRC_ALPHA
+                GL_DST_ALPHA GL_ONE_MINUS_DST_ALPHA
+                GL_SRC_COLOR GL_ONE_MINUS_SRC_COLOR
+                GL_DST_COLOR GL_ONE_MINUS_DST_COLOR
+                GL_LEQUAL GL_EQUAL GL_GEQUAL GL_GREATER GL_LESS
+                GL_CONSTANT_ALPHA GL_ONE_MINUS_CONSTANT_ALPHA
+                GL_CONSTANT_COLOR GL_ONE_MINUS_CONSTANT_COLOR
+            </Keywords>
+
+            <!-- Unused -->
+            <Keywords name="Keywords5"></Keywords>
+            <Keywords name="Keywords6"></Keywords>
+            <Keywords name="Keywords7"></Keywords>
+            <Keywords name="Keywords8"></Keywords>
+
+            <!-- Operators + folding -->
+            <Keywords name="Operators1">{ }</Keywords>
+            <Keywords name="Folders in code1">{</Keywords>
+            <Keywords name="Folders in code2">}</Keywords>
+
+            <!-- Strings -->
+            <Keywords name="Delimiters">
+                00" 01\ 02"
+            </Keywords>
+
+        </KeywordLists>
+
+        <Styles>
+
+            <!-- Default -->
+            <WordsStyle name="DEFAULT" fgColor="000000" bgColor="NONE" fontStyle="0" />
+
+            <!-- Comments -->
+            <WordsStyle name="COMMENTS" fgColor="666666" bgColor="NONE" fontStyle="2" />
+            <WordsStyle name="LINE COMMENTS" fgColor="666666" bgColor="NONE" fontStyle="2" />
+
+            <!-- Numbers -->
+            <WordsStyle name="NUMBERS" fgColor="663399" bgColor="NONE" fontStyle="0" />
+
+            <!-- Shader + q3map2 -->
+            <WordsStyle name="KEYWORDS1" fgColor="0099CC" bgColor="NONE" fontStyle="1" />
+
+            <!-- Stage-level -->
+            <WordsStyle name="KEYWORDS2" fgColor="008000" bgColor="NONE" fontStyle="1" />
+
+            <!-- tcMod + waveforms -->
+            <WordsStyle name="KEYWORDS3" fgColor="993333" bgColor="NONE" fontStyle="0" />
+
+            <!-- GL constants -->
+            <WordsStyle name="KEYWORDS4" fgColor="CC8800" bgColor="NONE" fontStyle="1" />
+
+            <!-- Unused -->
+            <WordsStyle name="KEYWORDS5" fgColor="000000" bgColor="NONE" fontStyle="0" />
+            <WordsStyle name="KEYWORDS6" fgColor="000000" bgColor="NONE" fontStyle="0" />
+            <WordsStyle name="KEYWORDS7" fgColor="000000" bgColor="NONE" fontStyle="0" />
+            <WordsStyle name="KEYWORDS8" fgColor="000000" bgColor="NONE" fontStyle="0" />
+
+            <!-- Operators + folding -->
+            <WordsStyle name="OPERATORS" fgColor="003366" bgColor="NONE" fontStyle="1" />
+            <WordsStyle name="FOLDER IN CODE1" fgColor="003366" bgColor="NONE" fontStyle="1" />
+            <WordsStyle name="FOLDER IN CODE2" fgColor="003366" bgColor="NONE" fontStyle="1" />
+
+            <!-- Strings -->
+            <WordsStyle name="DELIMITERS1" fgColor="663399" bgColor="NONE" fontStyle="0" />
+            <WordsStyle name="DELIMITERS2" fgColor="663399" bgColor="NONE" fontStyle="0" />
+
+        </Styles>
+    </UserLang>
+</NotepadPlus>
